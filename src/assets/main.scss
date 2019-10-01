@@ -1,0 +1,342 @@
+*,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.sidebar {
+    .logo {
+        font-size: 30px;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        color: #1da1f2;
+
+        &:hover {
+            background-color: rgba(29, 161, 242, 0.1);
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+
+            a {
+                color: #1da1f2;
+            }
+        }
+    }
+
+    ul {
+        li {
+            a {
+                padding: 10px 0;
+                display: inline-block;
+                color: #000;
+                border-radius: 50px;
+                padding-right: 20px;
+
+                .sidebar-icon {
+                    height: 1.75rem;
+                    margin-right: 10px;
+                    display: inline-block;
+                    font-size: 26px;
+                    margin-left: 15px;
+                }
+
+                &:hover {
+                    background-color: rgba(29, 161, 242, 0.1);
+                    color: #1da1f2;
+
+                    .sidebar-icon {
+                        color: #1da1f2;
+                        fill: #1da1f2;
+                    }
+                }
+            }
+        }
+    }
+
+    .tweet {
+        padding: 10px;
+        background-color: #1da1f2;
+        color: #fff;
+        border: 0;
+        width: 100%;
+        border-radius: 50px;
+    }
+}
+
+#tweetModal {
+    .modal-body {
+        .user-icon {
+            font-size: 50px;
+        }
+
+        textarea {
+            min-height: 149px;
+            padding: 10px;
+            border: 0;
+        }
+    }
+
+    .modal-footer {
+        ul {
+            li {
+                border-radius: 50%;
+                padding: 10px;
+                text-align: center;
+
+                .tweet-icon {
+                    height: 1.5em;
+                    cursor: pointer;
+                    fill: #1da1f2;
+                }
+
+                &:hover {
+                    background-color: rgba(29, 161, 242, 0.1);
+                }
+            }
+        }
+    }
+}
+
+.profile-info {
+    border-left: 1px solid rgb(230, 236, 240);
+    border-right: 1px solid rgb(230, 236, 240);
+    min-height: 100%;
+    position: relative;
+
+    .profile-info-header {
+        padding: 20px 0;
+        border-bottom: 1px solid rgb(230, 236, 240);
+    }
+
+    .cover-pic {
+        background-color: rgb(204, 214, 221);
+        min-height: 200px;
+
+        &.small {
+            background-color: rgba(0, 0, 0, 0.3);;
+        }
+    }
+
+    .profile-pic {
+        width: 90px;
+        height: 90px;
+        border-radius: 50%;
+        background-position: center;
+        position: absolute;
+        top: 221px;
+        border: 4px solid #fff;
+        left: 17px;
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        &.small {
+            top: 149px;
+            left: 30px;
+        }
+    }
+
+    .profile-details {
+        padding: 20px;
+
+        h3 {
+            color: #000;
+        }
+
+        p {
+            color: rgb(101, 119, 134);
+
+            a {
+                color: rgb(101, 119, 134);
+            }
+
+            .calinder {
+                height: 1.25em;
+                fill: rgb(101, 119, 134);
+            }
+        }
+    }
+}
+
+.back {
+    fill: #1da1f2;
+    height: 1.5em;
+    cursor: pointer;
+}
+
+.save {
+    background-color: #1da1f2;
+    padding: 5px 10px;
+    border-radius: 50px;
+    color: #fff;
+    border: 0;
+    margin-left: auto;
+}
+
+.post-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+        background-color: rgba(29, 161, 242, 0.1);
+        cursor: pointer;
+    }
+}
+
+.edit-profile {
+    padding: 10px 20px;
+    border: 1px solid #1da1f2;
+    color: #1da1f2;
+    background-color: #fff;
+    border-radius: 50px;
+    margin-top: 20px;
+    margin-right: 10px;
+
+    &:hover {
+        cursor: pointer;
+        background-color: rgba(29, 161, 242, 0.1);
+    }
+}
+
+.modal-header .close {
+    padding: 0;
+    margin: 0;
+}
+
+.modal-header {
+    justify-content: start;
+}
+
+.profile-header {
+    border-bottom: 1px solid rgb(230, 236, 240);
+    margin-bottom: 20px;
+    a {
+        padding: 10px 0;
+        display: block;
+        width: 100%;
+        color: rgb(101, 119, 134);
+        &:hover {
+            background-color: rgba(29, 161, 242, 0.1);
+        }
+        &.router-link-exact-active.router-link-active {
+            color: #1da1f2;
+            border-bottom: 2px solid #1da1f2;
+            padding: 10px 0;
+            display: block;
+            width: 100%;
+        }
+    }
+}
+
+.posts {
+    border-bottom: 1px solid rgb(230, 236, 240);
+    padding-top: 10px;
+    .post-info {
+        h5 {
+            color: #000;
+            float: left;
+            margin-right: 10px;
+        }
+        p {
+            color: rgb(101, 119, 134);
+        }
+    }
+    .post-footer {
+        margin-top: 10px;
+        ul {
+            li {
+                flex: 0 0 20%;
+            }
+        }
+        .post-icons {
+            fill: rgb(101, 119, 134);
+            width: 1.25em;
+        }
+    }
+}
+
+.post-pic {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-position: center;
+    border: 4px solid #fff;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#editProfile {
+    .modal-header {
+        padding: 10px;
+        border-bottom: 1px solid #eee;
+    }
+    .modal-body {
+        padding: 0;
+        min-height: 500px;
+        overflow-y: scroll;
+        .change-photo {
+            position: absolute;
+            z-index: 10;
+            opacity: 0;
+            cursor: pointer;
+        }
+        .change-info {
+            background-color: rgb(245, 248, 250);
+            margin-top: 40px;
+            label {
+                color: #1da1f2;
+                width: 100%;
+                padding: 10px;
+            }
+            input,
+            textarea {
+                border: 0;
+                padding: 6px;
+                border-bottom: 1px solid #1da1f2;
+                width: 100%;
+                background-color: #f5f8fa;
+            }
+        }
+        .camera-icon {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 5;
+            cursor: pointer;
+
+            &:hover {
+                background-color: rgba(29, 161, 242, 0.1);
+            }
+            svg {
+                height: 1.5em;
+                fill: #fff;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 767px) {
+    .sidebar ul li a,
+    .sidebar .tweet {
+        font-size: 0;
+    }
+    .tweet.small {
+        font-size: 15px;
+    }    
+}
+
